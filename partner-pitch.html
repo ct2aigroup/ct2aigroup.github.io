@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CT² AI Group — Partner Opportunity</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0a0e1a;
+      color: #e8eaf0;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #0a0e1a 0%, #0d1f3c 50%, #0a0e1a 100%);
+      padding: 70px 40px 50px;
+      text-align: center;
+      border-bottom: 1px solid #1e3a5f;
+    }
+
+    .logo {
+      font-size: 48px;
+      font-weight: 800;
+      color: #ffffff;
+    }
+
+    .logo sup {
+      font-size: 26px;
+      color: #3b9eff;
+      vertical-align: super;
+    }
+
+    .hero-sub {
+      margin-top: 12px;
+      font-size: 13px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #3b9eff;
+    }
+
+    .hero-title {
+      margin-top: 32px;
+      font-size: 30px;
+      font-weight: 700;
+      color: #ffffff;
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.4;
+    }
+
+    .hero-desc {
+      margin-top: 20px;
+      font-size: 16px;
+      color: #b0c4de;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.8;
+    }
+
+    /* SECTIONS */
+    .section {
+      padding: 60px 40px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #3b9eff;
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-size: 28px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+
+    .section-body {
+      font-size: 16px;
+      line-height: 1.9;
+      color: #b0c4de;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid #1e3a5f;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* OPPORTUNITY CARDS */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      margin-top: 32px;
+    }
+
+    .card {
+      background: #0d1f3c;
+      border: 1px solid #1e3a5f;
+      border-radius: 10px;
+      padding: 26px 22px;
+    }
+
+    .card-icon { font-size: 26px; margin-bottom: 12px; }
+    .card-title { font-size: 15px; font-weight: 700; color: #ffffff; margin-bottom: 8px; }
+    .card-desc { font-size: 14px; color: #7a9cc4; line-height: 1.7; }
+
+    /* PARTNER MODEL */
+    .model-list {
+      margin-top: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .model-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      background: #0d1f3c;
+      border: 1px solid #1e3a5f;
+      border-radius: 8px;
+      padding: 20px;
+    }
+
+    .model-icon {
+      font-size: 22px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .model-text { font-size: 15px; color: #b0c4de; line-height: 1.7; }
+    .model-text strong { color: #ffffff; }
+
+    /* WHAT WE PROVIDE */
+    .provide-list {
+      margin-top: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .provide-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .check {
+      width: 22px;
+      height: 22px;
+      background: #3b9eff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 12px;
+      font-weight: 700;
+      color: #fff;
+      margin-top: 2px;
+    }
+
+    .provide-text { font-size: 15px; color: #b0c4de; line-height: 1.7; }
+    .provide-text strong { color: #ffffff; }
+
+    /* ROADMAP */
+    .roadmap {
+      margin-top: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .roadmap-item {
+      display: flex;
+      gap: 24px;
+      position: relative;
+    }
+
+    .roadmap-left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 40px;
+      flex-shrink: 0;
+    }
+
+    .roadmap-dot {
+      width: 16px;
+      height: 16px;
+      background: #3b9eff;
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 4px;
+    }
+
+    .roadmap-line {
+      width: 2px;
+      background: #1e3a5f;
+      flex: 1;
+      margin-top: 4px;
+    }
+
+    .roadmap-item:last-child .roadmap-line { display: none; }
+
+    .roadmap-content {
+      padding-bottom: 32px;
+    }
+
+    .roadmap-phase {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #3b9eff;
+      margin-bottom: 6px;
+    }
+
+    .roadmap-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+
+    .roadmap-desc {
+      font-size: 14px;
+      color: #7a9cc4;
+      line-height: 1.7;
+    }
+
+    /* MEDICAL SECTION */
+    .highlight-box {
+      background: #0d1f3c;
+      border: 1px solid #3b9eff;
+      border-radius: 10px;
+      padding: 28px;
+      margin-top: 28px;
+    }
+
+    .highlight-box p {
+      font-size: 15px;
+      color: #b0c4de;
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+
+    .highlight-box ul {
+      padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .highlight-box ul li {
+      font-size: 15px;
+      color: #b0c4de;
+      line-height: 1.6;
+    }
+
+    .highlight-box ul li strong { color: #ffffff; }
+
+    /* CTA */
+    .cta-section {
+      background: #0d1f3c;
+      border-top: 1px solid #1e3a5f;
+      padding: 60px 40px;
+      text-align: center;
+    }
+
+    .cta-section .section-title { text-align: center; }
+
+    .cta-section p {
+      font-size: 16px;
+      color: #b0c4de;
+      max-width: 560px;
+      margin: 16px auto 32px;
+      line-height: 1.8;
+    }
+
+    .cta-email {
+      display: inline-block;
+      font-size: 18px;
+      font-weight: 600;
+      color: #3b9eff;
+      text-decoration: none;
+      border: 1px solid #3b9eff;
+      padding: 14px 36px;
+      border-radius: 6px;
+    }
+
+    .cta-email:hover { background: #3b9eff; color: #fff; }
+
+    footer {
+      text-align: center;
+      padding: 28px 40px;
+      font-size: 13px;
+      color: #3a5272;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="logo">CT<sup>2</sup> AI Group</div>
+    <div class="hero-sub">Partner Opportunity</div>
+    <div class="hero-title">Join a Group of Industry Experts Using AI to Transform How Businesses Operate</div>
+    <p class="hero-desc">
+      We're building a network of specialized consultants who use AI to solve real operational
+      problems for businesses across every industry. This is an invitation to be part of it
+      from the ground floor.
+    </p>
+  </div>
+
+  <!-- THE OPPORTUNITY -->
+  <div class="section">
+    <div class="section-label">The Opportunity</div>
+    <div class="section-title">Why Now, Why This</div>
+    <p class="section-body">
+      AI is changing how every industry operates — but most small and mid-size businesses
+      don't know where to start. They need trusted experts who understand their industry
+      AND know how to apply AI to their specific problems. That gap is the opportunity.
+      <br><br>
+      CT² AI Group is building a consulting firm that pairs industry partners with AI
+      tools and agents to deliver real, practical solutions — process documentation, SOPs,
+      compliance systems, dashboards, quality control, custom apps, and more. We're not
+      selling software. We're building custom solutions that fit how each client actually works.
+    </p>
+
+    <div class="cards">
+      <div class="card">
+        <div class="card-icon">📈</div>
+        <div class="card-title">Growing Market</div>
+        <div class="card-desc">AI consulting for small business is one of the fastest growing service categories right now.</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🏗️</div>
+        <div class="card-title">Underserved Industries</div>
+        <div class="card-desc">Construction, manufacturing, healthcare — most have no AI strategy and no one helping them build one.</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🤖</div>
+        <div class="card-title">AI as the Delivery Engine</div>
+        <div class="card-desc">We use AI agents to deliver faster, better, and at a fraction of the cost of traditional consulting.</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🌐</div>
+        <div class="card-title">Multi-Industry Reach</div>
+        <div class="card-desc">Each partner covers their own industry — meaning CT² AI Group can serve any market.</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider"/>
+
+  <!-- PARTNER MODEL -->
+  <div class="section">
+    <div class="section-label">The Partner Model</div>
+    <div class="section-title">How This Works for You</div>
+
+    <div class="model-list">
+      <div class="model-item">
+        <div class="model-icon">💰</div>
+        <div class="model-text"><strong>You keep 100% of what you earn.</strong> There is no revenue split. What you bill your clients is yours — period.</div>
+      </div>
+      <div class="model-item">
+        <div class="model-icon">🆓</div>
+        <div class="model-text"><strong>Free to join during our launch phase.</strong> We're building the brand and the infrastructure together. No fees while we get established.</div>
+      </div>
+      <div class="model-item">
+        <div class="model-icon">🎯</div>
+        <div class="model-text"><strong>You focus on your industry.</strong> Bring your expertise — we handle the AI tools, the business development, and the back-office support.</div>
+      </div>
+      <div class="model-item">
+        <div class="model-icon">📅</div>
+        <div class="model-text"><strong>Work on your terms.</strong> There is no minimum commitment. Work as much or as little as you want — your income is driven by your effort.</div>
+      </div>
+      <div class="model-item">
+        <div class="model-icon">🤝</div>
+        <div class="model-text"><strong>Collaborate with other partners.</strong> When a client needs expertise outside your lane, the network has you covered — and vice versa.</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider"/>
+
+  <!-- WHAT WE PROVIDE -->
+  <div class="section">
+    <div class="section-label">What CT² AI Group Provides</div>
+    <div class="section-title">What You Get as a Partner</div>
+
+    <div class="provide-list">
+      <div class="provide-item">
+        <div class="check">✓</div>
+        <div class="provide-text"><strong>Brand & Credibility</strong> — Operate under the CT² AI Group name with a professional web presence already live at ct2aigroup.github.io</div>
+      </div>
+      <div class="provide-item">
+        <div class="check">✓</div>
+        <div class="provide-text"><strong>AI Tools & Agent Infrastructure</strong> — Access to the custom AI agents and systems being built to help deliver client work faster and better</div>
+      </div>
+      <div class="provide-item">
+        <div class="check">✓</div>
+        <div class="provide-text"><strong>Business Development Support</strong> — Help with outreach, pitch materials, and landing clients in your industry</div>
+      </div>
+      <div class="provide-item">
+        <div class="check">✓</div>
+        <div class="provide-text"><strong>Partner Network</strong> — A group of partners across industries you can collaborate with and refer work to</div>
+      </div>
+      <div class="provide-item">
+        <div class="check">✓</div>
+        <div class="provide-text"><strong>Templates & Systems</strong> — SOPs, proposal templates, client onboarding systems — built so you can focus on delivery</div>
+      </div>
+      <div class="provide-item">
+        <div class="check">✓</div>
+        <div class="provide-text"><strong>AI Training & Ongoing Support</strong> — We train you on the AI tools and agents we build, and provide continuous support to help you deliver results for your clients. You don't need to be a tech expert — we've got you covered.</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider"/>
+
+  <!-- YOUR INDUSTRY -->
+  <div class="section">
+    <div class="section-label">Your Industry Focus</div>
+    <div class="section-title">You Bring the Expertise — We Build Around It</div>
+    <p class="section-body">
+      Every industry has its own operational challenges, compliance requirements, and
+      inefficiencies. That's exactly why we build our team with partners — people who
+      have lived and worked in their industry and know what actually needs to be solved.
+      <br><br>
+      Whether your background is in construction, healthcare, manufacturing, energy,
+      logistics, or any other field — your expertise is the foundation. We build the
+      AI tools and systems around what you know.
+    </p>
+
+    <div class="highlight-box">
+      <p>As a CT² AI Group partner, you would help clients in your industry with:</p>
+      <ul>
+        <li><strong>Process Documentation & SOPs</strong> — AI-generated documentation tailored to your industry's standards and workflows</li>
+        <li><strong>Compliance & Regulatory Systems</strong> — Automated tracking and documentation for the rules that govern your industry</li>
+        <li><strong>Operational Workflow Optimization</strong> — Finding and fixing inefficiencies using AI analysis and automation</li>
+        <li><strong>Safety & Incident Reporting</strong> — Streamlined reporting systems built for how your industry actually operates</li>
+        <li><strong>Dashboards & Reporting</strong> — Real-time visibility into the metrics that matter most in your field</li>
+        <li><strong>Custom AI Agents & Apps</strong> — Purpose-built tools designed around your clients' specific problems</li>
+      </ul>
+    </div>
+  </div>
+
+  <hr class="divider"/>
+
+  <!-- ROADMAP -->
+  <div class="section">
+    <div class="section-label">The Plan</div>
+    <div class="section-title">Where We're Going</div>
+
+    <div class="roadmap">
+      <div class="roadmap-item">
+        <div class="roadmap-left">
+          <div class="roadmap-dot"></div>
+          <div class="roadmap-line"></div>
+        </div>
+        <div class="roadmap-content">
+          <div class="roadmap-phase">Now — Month 1</div>
+          <div class="roadmap-title">Build the Foundation</div>
+          <div class="roadmap-desc">Establish the brand, bring on founding partners, define service offerings per industry, build out the AI agent infrastructure, and prepare for client outreach.</div>
+        </div>
+      </div>
+
+      <div class="roadmap-item">
+        <div class="roadmap-left">
+          <div class="roadmap-dot"></div>
+          <div class="roadmap-line"></div>
+        </div>
+        <div class="roadmap-content">
+          <div class="roadmap-phase">Month 2–3</div>
+          <div class="roadmap-title">Land the First Clients</div>
+          <div class="roadmap-desc">Each partner targets their industry with outreach. Run discovery calls, deliver pilot projects, and build case studies that prove the model works.</div>
+        </div>
+      </div>
+
+      <div class="roadmap-item">
+        <div class="roadmap-left">
+          <div class="roadmap-dot"></div>
+          <div class="roadmap-line"></div>
+        </div>
+        <div class="roadmap-content">
+          <div class="roadmap-phase">Month 4–6</div>
+          <div class="roadmap-title">Scale What Works</div>
+          <div class="roadmap-desc">Use early client results to attract more clients. Refine the AI agents and delivery systems. Grow the partner network into additional industries.</div>
+        </div>
+      </div>
+
+      <div class="roadmap-item">
+        <div class="roadmap-left">
+          <div class="roadmap-dot"></div>
+          <div class="roadmap-line"></div>
+        </div>
+        <div class="roadmap-content">
+          <div class="roadmap-phase">6–12 Months</div>
+          <div class="roadmap-title">Establish CT² AI Group as a Known Firm</div>
+          <div class="roadmap-desc">Multiple partners, multiple industries, a track record of results, and a growing library of AI tools that make every engagement faster and more profitable.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-section">
+    <div class="section-label">Let's Talk</div>
+    <div class="section-title">Ready to Be Part of This?</div>
+    <p>
+      We're building something real here — a consulting firm that uses AI to deliver
+      results that weren't possible before. If you're ready to bring your expertise
+      to the table, let's have a conversation.
+    </p>
+    <a href="mailto:ct2aigroup@gmail.com" class="cta-email">ct2aigroup@gmail.com</a>
+  </div>
+
+  <footer>
+    &copy; 2026 CT² AI Group. All rights reserved. &nbsp;|&nbsp; ct2aigroup.github.io
+  </footer>
+
+</body>
+</html>
